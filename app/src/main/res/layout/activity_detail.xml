@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".activities.DetailActivity">
+
+
+
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tech enthusiasm travel to Germany to Google DevFest"
+        android:textSize="21sp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/maisonneue_bold"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="February 06, 2020"
+        android:layout_marginBottom="4dp"
+        android:textAlignment="textEnd"
+        android:textSize="17sp"
+        android:textColor="@color/colorGrey"
+        android:fontFamily="@font/maison_neue_light"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:id="@+id/news_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+
+            android:src="@drawable/im_1"/>
+
+
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_photo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/man"
+            android:layout_margin="4dp"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="2dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            >
+
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Michael Boluwaji"
+                android:fontFamily="@font/maison_neue_medium"
+                android:textSize="15sp"
+
+
+                />
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LifeStyle"
+                android:fontFamily="@font/maison_neue_light"
+                android:textSize="13sp"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The recent published update about coronal virus reveals..."
+        android:textSize="15sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/maison_neue_light"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:text="COMMENTS"
+        android:textAllCaps="true"
+        android:textSize="14sp"
+        android:textColor="@color/colorGrey"
+        android:fontFamily="@font/maisonneue_bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBlack"
+        />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comment_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/comment_list"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Add your comment."
+                android:textSize="15sp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/maison_neue_medium"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+
+
+                >
+
+
+                <EditText
+                    android:id="@+id/comment_editxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Your Comment"
+                    android:textColor="@color/colorBlack"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/maison_neue_light"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/commentBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post"
+                android:padding="6dp"
+                android:fontFamily="@font/maison_neue_medium"
+                android:textSize="16sp"
+                android:background="@color/colorAccent"
+                style="@style/TextAppearance.AppCompat.Button"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

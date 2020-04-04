@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:fontFamily="@font/maisonneue_bold"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_features"
+        android:fontFamily="@font/maisonneue_bold"
+        android:icon="@drawable/ic_import_contacts_black_24dp"
+        android:title="Feature" />
+
+    <item
+        android:id="@+id/navigation_sponsored"
+        android:fontFamily="@font/maisonneue_bold"
+        android:icon="@drawable/ic_payment_black_24dp"
+        android:title="Sponsored" />
+
+    <item
+        android:id="@+id/navigation_email_brief"
+        android:icon="@drawable/ic_view_list_black_24dp"
+        android:fontFamily="@font/maisonneue_bold"
+        android:title="Email Brief" />
+
+
+
+</menu>
